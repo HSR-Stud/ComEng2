@@ -5,8 +5,8 @@
 
 \begin{itemize}
     \item Harvard Architecture
-    \subitem \rightarrow Zugriffe auf Instruktionen und Daten \newline
-    können gleichzeitig stattfinden
+    \subitem \rightarrow Zugriffe auf Instruktionen und Daten
+    \subitem können gleichzeitig stattfinden
     \item Internal Bus Interconnect
     \subitem \rightarrow mehrere Bus-Interface 
     \item Nested Interrupt Controller \textbf{(NVIC)}
@@ -27,7 +27,7 @@
     \item 8 bis 256 Prioritätslevel
     \end{itemize}
     \rightarrow ISR benötigt 12 Taktzyklen\newline
-    Siehe auch:\nameref{NVIC}\\
+    Siehe auch:\nameref{NVIC} S\pageref{NVIC}\\
 \end{minipage}
 \begin{minipage}{\linewidth}
     \subsubsection{FPU - (nur Cortex M4!)}
@@ -35,8 +35,9 @@
 \end{minipage}
 \begin{minipage}{\linewidth}
     \subsubsection{WIC (Wakeup Interrupt Controller)}
-    Für die Umsetzung von Low-Power-Modes\newline
+    Für die Umsetzung von Low-Power-Modes.\newline
     Dadruch kann 99\% der Cortex M3-Prozessoren im Low-Power-Bereich arbeiten.
+    \newline
     \newline
     Ist mit dem NVIC verknüpft und holt den Prozessor aus diesem Modus heraus, um auf einen Interrupt reagieren zu können\\
 \end{minipage}
@@ -99,7 +100,7 @@
         \hline 
         \textbf{T}& Thumb state, always 1; Trying to clear this bit will caus a fault exception \\ 
         \hline 
-        \textbf{Exception number}& INdicates whiche exception the processor is handeling \\ 
+        \textbf{Exception number}& Indicates whiche exception the processor is handeling \\ 
         \hline 
     \end{tabular} 
 \end{minipage}

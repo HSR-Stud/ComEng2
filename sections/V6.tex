@@ -11,15 +11,15 @@
 
     \includegraphics[width=\linewidth]{images/NVICExcp}
 \end{multicols}
-Exception-Handler für Interrupts werden als INterrupt Service Routine (ISR) bezeichnet.
+Exception-Handler für Interrupts werden als Interrupt Service Routine (ISR) bezeichnet.
 
 \subsection{Reset und Reset-Sequenzen}
 \subsubsection{Reset}
 Es gitb 3 Arten von Reset:\\
 \begin{tabular}{ll}
-    Power-on Reset& Resettet den gesammten \mu C, auch alle Preripherien und Debug-Komponenten \\ 
-    System Reset& Resettet nur den Prozessor nu die Periferien, aber nicht die Debug-Komponenten \\ 
-    Processer Reset& Resettet nur den Prozessor\\
+    \textbf{Power-on Reset}& Resettet den gesammten \mu C, auch alle Preripherien und Debug-Komponenten \\ 
+   \textbf{ System Reset}& Resettet nur den Prozessor nu die Periferien, aber nicht die Debug-Komponenten \\ 
+   \textbf{ Processer Reset}& Resettet nur den Prozessor\\
 \end{tabular}
 
 \subsubsection{Reset Sequenz}
@@ -39,7 +39,7 @@ Register um Exceptions ein oder auszuschalten:\\
     \subsubsection{FAULTMASK}
     \begin{itemize}
         \item 1-bit Register
-        \item Wenn das aktiv ist, werden nur noch NMI-INterrups akzeptiert.\newline
+        \item Wenn das aktiv ist, werden nur noch NMI-Interrups akzeptiert.\newline
         alle anderen Interrupts und Exceptioln-Handlings werden deaktiviert
         \subitem \rightarrow Default-Wert = 0
     \end{itemize}
@@ -49,7 +49,7 @@ Register um Exceptions ein oder auszuschalten:\\
 \begin{itemize}
     \item Register das bis zu 8 Bits enthalten kann
     \item definiert eine Prioritätsstufe
-    \item Hohe Stufe = HOhe Priorität
+    \item Hohe Stufe = Hohe Priorität
     \item Wenn das gesetzt wird, werden alle Interrupts mit gleicher oder tieferer Stufe deaktiviert
 \end{itemize}
 
@@ -57,7 +57,7 @@ Register um Exceptions ein oder auszuschalten:\\
 Das Kontroll-Register definiert:
 \begin{enumerate}
     \item Die Auswahl zwischen MSP (Main-SP) und PSP(Process-SP)
-    \item Die Zugriffsstufe un Thread-Mode
+    \item Die Zugriffsstufe und Thread-Mode
     \subitem (Ob Privilegd oder unprivilegd)
     \end{enumerate}
     \begin{multicols}{2}

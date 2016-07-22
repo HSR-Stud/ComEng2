@@ -2,7 +2,7 @@
 \subsection{Anwendung und Grundlage der uP-Technik}
 \begin{multicols}{2}
 \subsubsection{Anwendungen}
-\begin{minipage}{5cm}
+\begin{minipage}{6cm}
 \begin{itemize}
     \item Supercomputer
     \item Arbeits und Server-Rechnern
@@ -30,16 +30,16 @@ Verstehe die wesentlichen System-komponetnen des Rechnersystems auf einem IC (In
     \item Speicher
     \item \textbf{Eingabe-/Ausgabe-}Schnittsellen
 \end{itemize}
-\includegraphics[width=7cm]{images/aufbauuC1}
-\includegraphics[width=7cm]{images/aufbauuCspeicher}
+\includegraphics[width=0.5\linewidth]{images/aufbauuC1}
+\includegraphics[width=0.5\linewidth]{images/aufbauuCspeicher}
 
 \subsubsection{Havard vs Von Neumann Architektur}
 \begin{multicols}{2}
     \textbf{Harvard Rechnermodell}\\
-    \includegraphics[width=7cm]{images/HavardArchi}
+    \includegraphics[width=6.5cm]{images/HavardArchi}
     \\	
     \textbf{von Neumann Rechnermodell}\\
-    \includegraphics[width=7cm]{images/NeumannArchi}
+    \includegraphics[width=6.5cm]{images/NeumannArchi}
 \end{multicols}
 \clearpage
 
@@ -59,7 +59,7 @@ Verstehe die wesentlichen System-komponetnen des Rechnersystems auf einem IC (In
 \subsubsection{Befehlsformate}
 \begin{multicols}{2}
 \begin{minipage}{\linewidth}
-Die Art und Wirkung eines Befehls wird im Befehlswort(\textbf{OpCode}) codiert
+Die Art und Wirkung eines Befehls wird im Befehlswort(\textbf{OpCode}) codiert.
 Darin sind neben der Operation auch die Operanden spezifiziert.
 Die Codierung des Befehlswortes erfolgt abhängig vom \mu P.
 Der Maschinencode setzt sich aus einem OpCode und einem oder mehreren Operanden zusammen.
@@ -88,23 +88,29 @@ effizienter als CISC-Rechner
         \item Arithmetische-logische Operationen arbeiten auf Registeroperanden
     \end{itemize}
     \item Pipline-Architecture \leftarrow Leistungssteigernde Architektur
-    \item Grosse semantische Lücke entsteht bei der Übersetzung aus der Hochsprache
+    \item Eine grosse semantische Lücke entsteht bei der Übersetzung aus der Hochsprache
 \end{itemize}
 
 \subsubsection{u Architektur}
-Beschriebt die architektonischen Details bei der Implementierung der \mu P aus sicht der Programmierer.
+Beschriebt die architektonischen Details bei der Implementierung der \mu P aus Sicht der Programmierer.
 Dies umfassst die Beschreibung der Zentraleinheit (CPU), des Rechenwerks (ALU) und des Steuerwerks (CU).
 
 \subsubsection{Hardware- /Software-Schnitsttelle}
-\includegraphics{images/HardwareSoftware}
+\begin{minipage}{10cm}
 \subsection{Hardware}
 \subsubsection{Registersatz}
-Register sind schnelle Zwischenspeicher für temporäre Daten im \mu P.\\
+Register sind schnelle Zwischenspeicher für temporäre Daten im \mu P.
+\end{minipage}
+\begin{minipage}{5cm}
+\includegraphics{images/HardwareSoftware}
+\end{minipage}
 
 \subsubsection{Taktfrequenz}
 Das Taktsignal steuert die zeitliche Abfolge im \mu P \newline
 \begin{multicols}{2}
+        \begin{minipage}{\linewidth}
     \[ f_{Takt}= \frac{1}{T_{takt}} \]
+        \end{minipage}
     
     \begin{minipage}{\linewidth}
         $ \Uparrow $ Taktrate $ \Leftrightarrow $$  \Uparrow  $Leistungsaufnahme \\
@@ -113,7 +119,10 @@ Das Taktsignal steuert die zeitliche Abfolge im \mu P \newline
 \end{multicols}
 \subsubsection{Leistungsaufnahme}
 \begin{multicols}{2}
+        \begin{minipage}{\linewidth}
 \[ P_{Gate}= \frac{1}{2} \cdot C_{Last} \cdot V_{DD}^2\cdot f_{Takt} \]
+    \end{minipage}
+    
 \begin{minipage}{\linewidth}
     $ P_{Gate} \qquad$Leistung pro CMOS Gate \newline
     $ C_{Last} \qquad $Lastkapazität\newline

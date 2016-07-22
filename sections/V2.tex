@@ -6,10 +6,14 @@
     \begin{itemize}
         \item \textbf{Lexikalische Analyse(scanning):}\newline
         Die Symbole der Sprache werden erkannt und Gruppiert. Leerzeichen werden eliminiert
-        \item \textbf{Syntaxanalyse(parsing):} Die erlannten Symbole werden in Sätzen zusammengefasst und in einem Parsbaum dargestellt
-        \item \textbf{Semantische Analyse:} Das Quellprogramm wird auf Fehler überprüft( zBsp. Typfehler) und der Parsbaum erhält Informationen über die verwendeten Bezeichner
-        \item \textbf{Zwischencode-Erzeugung:} Einige COmpiler erzeugen Code in einer Zwischensprache (abstrakte Maschinen)
-        \item \textbf{Code-Erzeugung:} Erzeugen von verschiebbarem Maschinencode.      
+        \item \textbf{Syntaxanalyse(parsing):}\newline
+         Die erkannten Symbole werden in Sätzen zusammengefasst und in einem Parsbaum dargestellt
+        \item \textbf{Semantische Analyse:}\newline
+         Das Quellprogramm wird auf Fehler überprüft (zBsp. Typfehler) und der Parsbaum erhält Informationen über die verwendeten Bezeichner
+        \item \textbf{Zwischencode-Erzeugung:}\newline
+         Einige Compiler erzeugen Code in einer Zwischensprache (abstrakte Maschinen)
+        \item \textbf{Code-Erzeugung:}\newline
+         Erzeugen von verschiebbarem Maschinencode.      
     \end{itemize}
 \end{minipage}
 
@@ -69,10 +73,12 @@
     \includegraphics[width=0.5\linewidth]{images/SimpleuPSystem}
 \begin{multicols}{2}    
     \subsubsection{Architectur eines uP}
-    \includegraphics[width=1.3\linewidth]{images/ArchitectuP}
-    
-    \begin{minipage}{5cm}
-        \begin{tabular}{c|c}
+    \begin{minipage}{1.3\linewidth}
+    \includegraphics[width=\linewidth]{images/ArchitectuP}
+        \end{minipage}
+        
+    \begin{minipage}[r]{4cm}
+        \begin{tabular}[r]{c|c}
             \textbf{AR}&Adressregister  \\ 
             \textbf{PC}&Programm Counter  \\ 
             \textbf{PSR}& Program Status Register \\ 
