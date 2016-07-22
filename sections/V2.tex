@@ -1,134 +1,104 @@
-\section{V3}
-\subsection{Halbleiter Speicher}
+\section{V2}
+\subsection{Compiler-Schritte}
+\vspace{-0.5cm}
 \begin{multicols}{2}
-\textbf{Zentraler Speicher}
-\begin{itemize}
-    \item direkt am Bussystem angeschlossen
-\end{itemize}
-\textbf{Peripherer Speicher}
-\begin{itemize}
-    \item über I/O-Schnittstelle angeschlossen
-\end{itemize}
-
-\includegraphics[width=10cm]{images/halbleiterfam}
-\end{multicols}
-
-\begin{multicols}{2}
-\subsubsection{ROM-Festwertspeicher}
-\includegraphics[width=8cm]{images/ROM}
-
-\subsubsection{RAM-Speicher-/Lese-Speicher}
-\includegraphics[width=8cm]{images/RAM}
-\end{multicols}
-
-\subsection{Speicherorganisation}
-\begin{multicols}{2}
-\includegraphics[width=8cm]{images/LittleBigEndian}
-
-\subsubsection{I/O - Schnittstelle}
-\includegraphics[width=8cm]{images/IOSchnittstelle}
-\end{multicols}
-
-\includegraphics{images/Speicherraumadressierung}
-\section{Cortex}
-\subsection{Cortex M Varianten}
-\begin{multicols}{2}
-\textbf{Cortex M0 und M0+}
+    \begin{minipage}{\linewidth}
     \begin{itemize}
-        \item kleinster Vertreter der CortexFam
-        \item Ersatz von 8Bit- uC
-        \end{itemize}                     
- \textbf{Cortex M1}
-    \begin{itemize}
-        \item als Softcore Implementiert
-        \item Vergleichbar mit Cortex-M0
+        \item \textbf{Lexikalische Analyse(scanning):}\newline
+        Die Symbole der Sprache werden erkannt und Gruppiert. Leerzeichen werden eliminiert
+        \item \textbf{Syntaxanalyse(parsing):} Die erlannten Symbole werden in Sätzen zusammengefasst und in einem Parsbaum dargestellt
+        \item \textbf{Semantische Analyse:} Das Quellprogramm wird auf Fehler überprüft( zBsp. Typfehler) und der Parsbaum erhält Informationen über die verwendeten Bezeichner
+        \item \textbf{Zwischencode-Erzeugung:} Einige COmpiler erzeugen Code in einer Zwischensprache (abstrakte Maschinen)
+        \item \textbf{Code-Erzeugung:} Erzeugen von verschiebbarem Maschinencode.      
     \end{itemize}
-\end{multicols}
-\begin{multicols}{2}
-   \textbf{Cortex M3}     
-     \begin{itemize}
-         \item erster Vertreter der CortexFam
-         \item 32 Bit Architektur
-         \item ersetzt 8 \& 16 Bit uC
-         \item Thumb ISA (Instruction Set Architecure)\newline
-         Mix aus 16 und 32BIt langen anweisungen
-     \end{itemize}   
-               
-   \textbf{Cortex M4} 
-    \begin{itemize}
-        \item vergleichbar mit M3 jedoch mit
-        \qquad\item Digital Signal Processing (DSP)
-        \qquad\item Floating Point Unit (FPU)
-        \newline
-      \end{itemize}  
-\end{multicols}
-\clearpage
-\begin{multicols}{2}
-\includegraphics[width=\linewidth]{images/cortexmfam}
+\end{minipage}
 
-\includegraphics[width=\linewidth]{images/cortexmcomp}
+    \includegraphics[width=\linewidth]{images/CompilerWorkflow2}
+\end{multicols}
+
+\subsection{Busortientierte Systeme}
+\subsubsection{Speicher}
+\begin{multicols}{2}
+    \textbf{RAM}
+    \begin{itemize}
+        \item Random Access Memory
+        \item Schreibe-/Lese-Speicher
+        \item Spannungsversorgung erforderlich
+        \item für Temporär Daten
+    \end{itemize}
+
+    \textbf{ROM}
+    \begin{itemize}
+        \item Read Only Memory
+        \item Festwert Speicher
+        \item auch ohne Spg. bleiben Daten erhalten
+    \end{itemize}
 \end{multicols}
 
 \begin{multicols}{3}
-    \textbf{Cortex-A}
+\begin{minipage}{4cm}
+        \textbf{Adressbus}
     \begin{itemize}
-        \item HighEnd Anwendungen und Betriebssysteme
-        \item hohe Rechenleistung
-        \item Chache Memory
+        \item unidirektional
+        \item bestimmt Grösse des Adressraums
     \end{itemize}
-    
-    \textbf{Cortex-R}
+\end{minipage}
+
+\begin{minipage}{4cm}
+    \textbf{Databus}
     \begin{itemize}
-       \item Echtzeitfähigkeit
-       \item hohe Zuverlässigkeit
-       \item System on Chip (SOC) 
-    \end{itemize}  
-    
-        \textbf{Cortex-M}
-        \begin{itemize}
-            \item Speziell für \mu C-Markt
-            \item Low Cost, Low Energy
-            \item System on Chip (SOC) 
-          \end{itemize}             
+        \item bidirektional
+    \end{itemize}
+\end{minipage}
+
+\begin{minipage}{5cm}
+    \textbf{Steuerbus}
+    \begin{itemize}
+        \item kontrolliert Buszugriffe
+        \item zeitlicher Ablauf der Signale
+    \end{itemize}
+\end{minipage}
 \end{multicols}
-\subsubsection{Vorteile der Cortex-M-Prozessoren}
+
 \begin{itemize}
-    \item Low Power
-        \subitem < 200\mu A / MHz
-    \item Performance
-        \subitem >1.25 DMIPS / MHz
-    \item Energy Efficiency
-        \subitem low Power, high performance
-    \item Code Density
-        \subitem Thumb 2 Befehlssatz
-    \item Interrupts
-        \subitem 240 Interrupts
-    \item Easy of Use, C Friedly
-    \item Scalability
-    \item Debug Features
-    \item Software portability and Reusebility
-    \item OS Support
-    \item Choices (Derivers, Tools, OS,..)    
+    \item[*] Die gesammte Menge der über den Adressbus adressierbaren Speicherzellen wird \textbf{Adressraum} genannt
+    \item[*] Die Anzahl parallel geführten \textbf{Datenleitungen} entspricht der maximal zu übertragenden Datenbreite
+    \item[*] Kontrollsigbale werden über den \textbf{Steuerbus} übertragen
 \end{itemize}
 
+    \includegraphics[width=0.5\linewidth]{images/SimpleuPSystem}
+\begin{multicols}{2}    
+    \subsubsection{Architectur eines uP}
+    \includegraphics[width=1.3\linewidth]{images/ArchitectuP}
+    
+    \begin{minipage}{5cm}
+        \begin{tabular}{c|c}
+            \textbf{AR}&Adressregister  \\ 
+            \textbf{PC}&Programm Counter  \\ 
+            \textbf{PSR}& Program Status Register \\ 
+            \textbf{IR}& Instruction Register  \\ 
+        \end{tabular} 
+    \end{minipage}
+\end{multicols}
+    
+\begin{multicols}{2}
+\begin{minipage}{8cm}
+\textbf{Flags}\newline
+\begin{tabular}{|c|c|l|}
+    \hline 
+    \textbf{N}  & \textbf{Negative} & Das von der ALU berechnete Ergebniss ist negativ \\ 
+    \hline 
+    \textbf{Z}  & \textbf{Zero} & Das von der ALU berechnete Ergenis ist gleich \textbf{0} \\ 
+    \hline 
+    \textbf{C}  &\textbf{Carry}  &Die Berechnung der ALU hat zu einem Übertrag geführt  \\ 
+    \hline 
+    \textbf{V}  &\textbf{Overflow}  & Die Berechnung der ALU hat zu einem Overflow geführt  \\ 
+    \hline 
+\end{tabular} 
+\end{minipage}
 
 
+\end{multicols}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\subsection{Befehlszyklus}
+    \includegraphics[height=9cm]{images/CommandFlowChart}
