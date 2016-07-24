@@ -1,14 +1,14 @@
 \section{V6}
 \begin{multicols}{2}
-\begin{minipage}{\linewidth}
-    \subsection{Exceptions and Interrupts}\label{Exceptions}
-    Der NVIC verarbeitet bis 240 IRQ und einem NMI\\
-    \begin{tabular}{ll}
-        normaler Programmablauf& \rightarrow Background  \\ 
-        Exception-Handler& \rightarrow Foreground  \\ 
-    \end{tabular} 
-\end{minipage}
-
+    \begin{minipage}{\linewidth}
+        \subsection{Exceptions and Interrupts}\label{Exceptions}
+        Der NVIC verarbeitet bis 240 IRQ und einen NMI\\
+        \begin{tabular}{ll}
+            normaler Programmablauf& \rightarrow Background  \\ 
+            Exception-Handler& \rightarrow Foreground  \\ 
+        \end{tabular} 
+    \end{minipage}
+    
     \includegraphics[width=\linewidth]{images/NVICExcp}
 \end{multicols}
 Exception-Handler für Interrupts werden als Interrupt Service Routine (ISR) bezeichnet.
@@ -17,9 +17,9 @@ Exception-Handler für Interrupts werden als Interrupt Service Routine (ISR) bez
 \subsubsection{Reset}
 Es gitb 3 Arten von Reset:\\
 \begin{tabular}{ll}
-    \textbf{Power-on Reset}& Resettet den gesammten \mu C, auch alle Preripherien und Debug-Komponenten \\ 
-   \textbf{ System Reset}& Resettet nur den Prozessor nu die Periferien, aber nicht die Debug-Komponenten \\ 
-   \textbf{ Processer Reset}& Resettet nur den Prozessor\\
+    \textbf{Power-on Reset}  & Resettet den gesammten \mu C, auch alle Preripherien und Debug-Komponenten \\ 
+    \textbf{System Reset}    & Resettet nur den Prozessor und die Periferien, aber nicht die Debug-Komponenten \\ 
+    \textbf{ Processer Reset}& Resettet nur den Prozessor\\
 \end{tabular}
 
 \subsubsection{Reset Sequenz}
@@ -33,7 +33,7 @@ Register um Exceptions ein oder auszuschalten:\\
         \item 1-bit Register
         \item Wenn das aktiv ist, werden NMI-Interrupts erlaubt
         \subitem \rightarrow alle anderen Interrupts werden überdeckt
-        \subitem \rightarrow defaultwert= 0, also deaktiviert
+        \subitem \rightarrow Default-Wert= 0, also deaktiviert
     \end{itemize}
     
     \subsubsection{FAULTMASK}
@@ -56,12 +56,12 @@ Register um Exceptions ein oder auszuschalten:\\
 \subsubsection{Control-Register}
 Das Kontroll-Register definiert:
 \begin{enumerate}
-    \item Die Auswahl zwischen MSP (Main-SP) und PSP(Process-SP)
+    \item Die Auswahl zwischen MSP (Main-SP) und PSP (Process-SP)
     \item Die Zugriffsstufe und Thread-Mode
     \subitem (Ob Privilegd oder unprivilegd)
-    \end{enumerate}
-    \begin{multicols}{2}
+\end{enumerate}
+\begin{multicols}{2}
     \includegraphics[width=\linewidth]{images/StackPointerAuswahl}
     
-         \includegraphics[width=\linewidth]{images/controlRegister}
-             \end{multicols}
+    \includegraphics[width=\linewidth]{images/controlRegister}
+\end{multicols}

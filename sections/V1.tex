@@ -1,8 +1,17 @@
 \section{V1}
 \subsection{Anwendung und Grundlage der uP-Technik}
+
+\begin{minipage}{5cm}
+    \subsection{Aufbau}
+    Verstehe die wesentlichen System-komponetnen des Rechnersystems auf einem IC (Integrated Circuit)
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+    \includegraphics[width=\linewidth]{images/aufbauuC}
+\end{minipage}
+
 \begin{multicols}{2}
 \subsubsection{Anwendungen}
-\begin{minipage}{6cm}
+\begin{minipage}{\linewidth}
 \begin{itemize}
     \item Supercomputer
     \item Arbeits und Server-Rechnern
@@ -14,13 +23,8 @@
 \end{itemize}
 \end{minipage}
 
-\subsection{Aufbau}
-
-Verstehe die wesentlichen System-komponetnen des Rechnersystems auf einem IC (Integrated Circuit)\\	
-\includegraphics[width=7cm]{images/aufbauuC}
-
-\end{multicols}
-\subsubsection{Aufbau uP-basierten Systeme}
+\begin{minipage}{\linewidth}
+\subsubsection{Aufbau von uP-basierten Systemen}
 \begin{itemize}
     \item Zentraleinheit CPU mit
     \begin{itemize}
@@ -28,21 +32,28 @@ Verstehe die wesentlichen System-komponetnen des Rechnersystems auf einem IC (In
         \item Steuerwerk CU
     \end{itemize}
     \item Speicher
-    \item \textbf{Eingabe-/Ausgabe-}Schnittsellen
+    \item Eingabe-/Ausgabe-Schnittsellen
 \end{itemize}
+\end{minipage}
+\end{multicols}
+
 \includegraphics[width=0.5\linewidth]{images/aufbauuC1}
 \includegraphics[width=0.5\linewidth]{images/aufbauuCspeicher}
 
 \subsubsection{Havard vs Von Neumann Architektur}
 \begin{multicols}{2}
-    \textbf{Harvard Rechnermodell}\\
-    \includegraphics[width=6.5cm]{images/HavardArchi}
-    \\	
-    \textbf{von Neumann Rechnermodell}\\
-    \includegraphics[width=6.5cm]{images/NeumannArchi}
+    \begin{minipage}{\linewidth}
+        \textbf{Harvard Rechnermodell}\\
+        \includegraphics[width=0.6\linewidth]{images/HavardArchi}
+    \end{minipage}
+    
+    \begin{minipage}{\linewidth}
+        \textbf{von Neumann Rechnermodell}\\
+        \includegraphics[width=0.6\linewidth]{images/NeumannArchi}
+    \end{minipage}
 \end{multicols}
 \clearpage
-
+%===================================
 \subsubsection{Programmierung eins uP}
 \begin{multicols}{2}
 \begin{minipage}{\linewidth}
@@ -95,13 +106,16 @@ effizienter als CISC-Rechner
 Beschriebt die architektonischen Details bei der Implementierung der \mu P aus Sicht der Programmierer.
 Dies umfassst die Beschreibung der Zentraleinheit (CPU), des Rechenwerks (ALU) und des Steuerwerks (CU).
 
-\subsubsection{Hardware- /Software-Schnitsttelle}
+
+
 \begin{minipage}{10cm}
 \subsection{Hardware}
 \subsubsection{Registersatz}
-Register sind schnelle Zwischenspeicher für temporäre Daten im \mu P.
+Register sind schnelle Zwischenspeicher für \newline
+temporäre Daten im \mu P.
 \end{minipage}
-\begin{minipage}{5cm}
+\begin{minipage}{0.5\linewidth}
+\subsubsection{Hardware- /Software-Schnitsttelle}
 \includegraphics{images/HardwareSoftware}
 \end{minipage}
 
@@ -124,10 +138,10 @@ Das Taktsignal steuert die zeitliche Abfolge im \mu P \newline
     \end{minipage}
     
 \begin{minipage}{\linewidth}
-    $ P_{Gate} \qquad$Leistung pro CMOS Gate \newline
+    $ P_{Gate} \qquad $Leistung pro CMOS Gate \newline
     $ C_{Last} \qquad $Lastkapazität\newline
-    $ V_{DD}\qquad $Versorgungsspannung\newline
-    $ f_{Takt} \qquad$Taktfrequenz
+    $ V_{DD}   \qquad $Versorgungsspannung\newline
+    $ f_{Takt} \qquad $Taktfrequenz
 \end{minipage}
 \end{multicols}
 
@@ -137,7 +151,7 @@ Das Taktsignal steuert die zeitliche Abfolge im \mu P \newline
 \begin{itemize}
     \item Der Präprozessor bereitet das Quellprogramm für den Compiler vor
     \item Der Compiler übersetz das Programm von einer Hochsprache in Assembly-Programm
-    \item Der Binder fasst verschiedene Dateien, die verschiebbaren Maschinencode enthalten zu einem Programm zusammen.
+    \item Der Binder fasst verschiedene Dateien, die verschiebbaren Maschinencode enthalten, zu einem Programm zusammen.
     \item Der Loader wandelt die verschiebbaren Adressen in Absolute Adressen um und läd sie in den Speicher des Systems.
 \end{itemize}
 
