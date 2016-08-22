@@ -13,7 +13,7 @@
         \hline 
     \end{tabular} 
 \end{minipage}
-\begin{minipage}{12cm}
+\begin{minipage}{14cm}
     \subsubsection{Aligned-Unaligned Data}
     \begin{multicols}{2}
             \includegraphics[width=0.5\textwidth]{images/alignedData}
@@ -23,4 +23,6 @@
 \subsubsection{Bit-Banding}
 \vspace{-0.5cm}
 \[\textbf{ BitBandAliasAddress = BitBandAliasBase + (MemoryAddres - BitbandRegionBase)* 32 + 4*BitNumber} \]
-\includegraphics[width=0.85\textwidth]{images/bitbanding}
+\[ BNr=[mod_{32}(BBAA-BBAB)]\cdot 2^2 \quad \rightarrow mod_{32}\; =\; 5\; Stellen\; von\: LSB\: in\: binär \]
+\[ MA = (BBAA-BBAB)\cdot 2^{-5} +BBRB \]
+\includegraphics[width=0.8\textwidth]{images/bitbanding}
