@@ -165,7 +165,7 @@
             \textbf{EPSR}& Execution Program Status Register \\ 
             \hline 
             \end{tabular}
-        \subsubsection{SP-zugriffe(Assembler)}
+        \subsubsection{SP-zugriffe (Assembler)}
         \includegraphics[width=\textwidth]{images/SPzugriffe}   
     \end{minipage}
     
@@ -192,7 +192,7 @@
         \hline 
         \textbf{T}& Thumb state, always 1; Trying to clear this bit will caus a fault exception \\ 
         \hline 
-        \textbf{Exception number}& Indicates whiche exception the processor is handeling \\ 
+        \textbf{Exception number}& Indicates which exception the processor is handling \\ 
         \hline 
     \end{tabular} 
 \end{minipage}
@@ -226,12 +226,12 @@ The Q flag is sticky in that once it has been set to 1, it is not affected by wh
     \end{minipage}
     
     \begin{minipage}{0.5\textwidth}
-        \subsubsection{Main-Stak-Pointer (MSP)}
+        \subsubsection{Main-Stack-Pointer (MSP)}
         \begin{itemize}
-            \item Standart Stack Pointer nach einem Reset
+            \item Standard Stack Pointer nach einem Reset
             \item Innerhalb von Exception-Interrupt-Handler wird immer der MSP benutzt!
             \end{itemize}
-        \subsubsection{Prozesor-Stack-Pointer (PSP)}
+        \subsubsection{Prozessor-Stack-Pointer (PSP)}
         \begin{itemize}
             \item Alternativer Stackpointer
             \item Wird nur im Thread-Mode verwendet

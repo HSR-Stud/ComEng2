@@ -61,7 +61,7 @@
     Ein \mu P kann durch individuelle Programmierung auf ganz unterschiedliche Art angepasst werden. \newline
     \rightarrow entscheidend für die Durchdringung im Markt.\newline
     Ein Programm enthält in aufeinanderfolgender Anordnung die Maschinen-Befehle oder -Instruktionen für den \mu P. Diese Maschiene-Befehle teilen der CPU mit, welche Operationen in welcher Reihenfolge und auf welche Daten angewendet werden sollen. \newline
-    Die Befehlsfolge des Programms wird innerhalb der CPU vom Steuerwerk gesteuert und schrittweise ausgeführt. Dazu wird der aktuell zur bearbeitende Befehl durch einen Programmzähler(PC) im Speicher adressiert.\newline
+    Die Befehlsfolge des Programms wird innerhalb der CPU vom Steuerwerk gesteuert und schrittweise ausgeführt. Dazu wird der aktuell zur bearbeitende Befehl durch einen Programmzähler (PC) im Speicher adressiert.\newline
     Der PC enthält laufend die Adresse der Speicherzelle des jeweiligen Befehls im Speicher.
 \end{minipage}
 
@@ -71,7 +71,7 @@
 \subsubsection{Befehlsformate}
 \begin{multicols}{2}
 \begin{minipage}{\linewidth}
-Die Art und Wirkung eines Befehls wird im Befehlswort(\textbf{OpCode}) codiert.
+Die Art und Wirkung eines Befehls wird im Befehlswort (\textbf{OpCode}) codiert.
 Darin sind neben der Operation auch die Operanden spezifiziert.
 Die Codierung des Befehlswortes erfolgt abhängig vom \mu P.
 Der Maschinencode setzt sich aus einem OpCode und einem oder mehreren Operanden zusammen.
@@ -92,23 +92,23 @@ Der Maschinencode setzt sich aus einem OpCode und einem oder mehreren Operanden 
 \subsubsection{RISC-Rechner}
 effizienter als CISC-Rechner
 \begin{itemize}
-    \item besteht aus einer kleien Anz. von Befehlen mit wenigen Adressierungsarten
+    \item besteht aus einer kleinen Anz. von Befehlen mit wenigen Adressierungsarten
     \item Registersatz enthält eine grosse Anzahl von allg. verwendbaren Registern\newline
     General Purpose Register (GPR)
     \item Speicherzugriff erfolgt über spezielle Lade- und Speicher-Befehle
     \begin{itemize}
-        \item Arithmetische-logische Operationen arbeiten auf Registeroperanden
+        \item Arithmetisch-logische Operationen arbeiten auf Registeroperanden
     \end{itemize}
-    \item Pipline-Architecture \leftarrow Leistungssteigernde Architektur
+    \item Pipeline-Architecture \leftarrow Leistungssteigernde Architektur
     \item Eine grosse semantische Lücke entsteht bei der Übersetzung aus der Hochsprache
 \end{itemize}
 
 \subsubsection{u Architektur}
-Beschriebt die architektonischen Details bei der Implementierung der \mu P aus Sicht der Programmierer.
-Dies umfassst die Beschreibung der Zentraleinheit (CPU), des Rechenwerks (ALU) und des Steuerwerks (CU).
+Beschreibt die architektonischen Details bei der Implementierung der \mu P aus Sicht der Programmierer.
+Dies umfasst die Beschreibung der Zentraleinheit (CPU), des Rechenwerks (ALU) und des Steuerwerks (CU).
 
 
-
+\clearpage
 \begin{minipage}{10cm}
 \subsection{Hardware}
 \subsubsection{Registersatz}
@@ -150,10 +150,10 @@ Das Taktsignal steuert die zeitliche Abfolge im \mu P \newline
 \begin{multicols}{2}
 \subsubsection{Ablauf}
 \begin{itemize}
-    \item Der Präprozessor bereitet das Quellprogramm für den Compiler vor
-    \item Der Compiler übersetz das Programm von einer Hochsprache in Assembly-Programm
-    \item Der Binder fasst verschiedene Dateien, die verschiebbaren Maschinencode enthalten, zu einem Programm zusammen.
-    \item Der Loader wandelt die verschiebbaren Adressen in Absolute Adressen um und läd sie in den Speicher des Systems.
+    \item Der \textbf{Präprozessor} bereitet das Quellprogramm für den Compiler vor
+    \item Der \textbf{Compiler} übersetzt das Programm von einer Hochsprache in ein Assembly-Programm
+    \item Der \textbf{Binder} fasst verschiedene Dateien, die verschiebbaren Maschinencode enthalten, zu einem Programm zusammen.
+    \item Der \textbf{Loader} wandelt die verschiebbaren Adressen in absolute Adressen um und lädt sie in den Speicher des Systems.
 \end{itemize}
 
 \includegraphics[width=\linewidth]{images/CompilerWorkflow}
