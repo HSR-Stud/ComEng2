@@ -1,12 +1,12 @@
 # ComEng2
 Zusammenfasssung der Vorlesung ComEng2 FS16
 
-##Beschreibung
+## Beschreibung
 Zusammenfassung für Computer Engineering 2 auf Grundlage der Vorlesung FS 16 von Erwin Brändle  
 Bei Korrekturen oder Ergänzungen wendet euch an einen der Mitwirkenden.
 
 
-##Modulschlussprüfung
+## Modulschlussprüfung
 Kompletter Stoff aus Skript, Vorlesung, Übungen und Praktikum  
  - Vorlesungsskript CompEng2 V1.2 komplett  
   - die Kapitel 2 und 7 sind im Selbststudium individuell aufzuarbeiten  
@@ -22,7 +22,7 @@ Kompletter Stoff aus Skript, Vorlesung, Übungen und Praktikum
      2.Teil   semi-open book   Aufgaben im Stil der Übungen, Praktika und der in den Vorlesungen gelösten Aufgaben 
     
  
-##Plan und Lerninhalte
+## Plan und Lerninhalte
 Fokus: ARM Cortex-M Architektur
  - RISC-Architektur, Core-Components, Register Model, Memory Model, Exception Model, Instruction Set Architecture
  - Konzept und Umsetzung der vektorisierten Interrupt Verarbeitung
@@ -30,12 +30,12 @@ Fokus: ARM Cortex-M Architektur
  - Address-, Daten-, Control-Bus, Adressdekodierung, Memory- und I/O-Mapping
  - Speicher- und ausgesuchte Peripherieschnittstellen
  
-##Contributors
+## Contributors
    - Stefan Reinli  stefan.reinli@hsr.ch  
    - Luca Mazzoleni luca.mazzoleni@hsr.ch  
    
-##License
-###Creative Commons BY-NC-SA 3.0
+## License
+### Creative Commons BY-NC-SA 3.0
 Sie dürfen:  
     - Das Werk bzw. den Inhalt vervielfältigen, verbreiten und öffentlich
     zugänglich machen.  
