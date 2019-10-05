@@ -71,12 +71,15 @@
 \end{itemize}
     \includegraphics[width=0.5\linewidth]{images/SimpleuPSystem}
     
-\begin{multicols}{2}    
-    \subsubsection{Architectur eines uP}
-    \begin{minipage}{1.3\linewidth}
-        \includegraphics[width=\linewidth]{images/ArchitectuP}
+\subsubsection{Architectur eines uP}
+    \begin{minipage}{12cm}
+        \includegraphics[width= 12cm]{images/ArchitectuP}
     \end{minipage}
-
+	%
+	\begin{minipage}{0.5cm}
+		\ \
+	\end{minipage}
+	%
     \begin{minipage}[r]{4cm} 
         \begin{tabular}[r]{c|c}
             \textbf{AR} & Adressregister  \\ 
@@ -84,12 +87,10 @@
             \textbf{PSR}& Program Status Register \\ 
             \textbf{IR} & Instruction Register  \\ 
         \end{tabular} 
-    \end{minipage}
-\end{multicols}
+	\end{minipage}
     
-\begin{multicols}{2}
-    \begin{minipage}{8cm}
-        \textbf{Flags}\newline
+	\begin{minipage}{9cm}
+        \textbf{Flags}, welche sich unter anderem im PSR befinden\newline
         \begin{tabular}{|c|c|l|}
             \hline 
             \textbf{N}  &\textbf{Negative}  & Das von der ALU berechnete Ergebniss ist negativ \\ 
@@ -101,8 +102,7 @@
             \textbf{V}  &\textbf{Overflow}  & Die Berechnung der ALU hat zu einem Overflow geführt  \\ 
             \hline 
         \end{tabular} 
-    \end{minipage}
-\end{multicols}
+	\end{minipage}
 
 \subsection{Befehlszyklus}
     \includegraphics[height=9cm]{images/CommandFlowChart}

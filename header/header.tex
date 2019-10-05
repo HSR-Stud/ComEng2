@@ -225,6 +225,16 @@
 }
 \makeatother
 
+% Settings which are used to set the distance above and under the sections
+%\titlespacing*{\paragraph}{0pt}{2.25ex plus 1ex minus .2ex}{1.0ex plus .2ex}
+\titlespacing{\section}{0em}{0.5em}{0.5em}
+\titlespacing{\subsection}{0em}{0.5em}{0.5em}
+\titlespacing{\subsubsection}{0em}{0.5em}{0.5em}
+% Linksbündig
+\setlength\parindent{0ex}
+
+%To delete the whitespace before an Itemize
+\setlist[itemize]{noitemsep, topsep=0pt}
 %% Achtung Symbol \danger
 \newcommand*{\TakeFourierOrnament}[1]{{%
         \fontencoding{U}\fontfamily{futs}\selectfont\char#1}}

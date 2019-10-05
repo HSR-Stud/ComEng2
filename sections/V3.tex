@@ -1,7 +1,6 @@
 \section{V3}
 \vspace{-0.5cm} 
-\begin{multicols}{2}
-    \begin{minipage}{\linewidth}
+    \begin{minipage}{9cm}
         \subsection{Halbleiter Speicher} 
         \textbf{Zentraler Speicher}
         \begin{itemize}
@@ -12,11 +11,15 @@
             \item über I/O-Schnittstelle angeschlossen
         \end{itemize}
     \end{minipage}
-    
-    \includegraphics[width=1.1\linewidth]{images/halbleiterfam}
-\end{multicols}
-
-\vspace{-1cm} 
+    %
+    \begin{minipage}{0.5cm}
+    	\ \
+    \end{minipage}
+    %
+    \begin{minipage}{9cm}
+    	\includegraphics[width=9cm]{images/halbleiterfam}
+    \end{minipage}
+ 
 \begin{multicols}{2}
     \subsubsection{ROM-Festwertspeicher}
     \includegraphics[width=8cm]{images/ROM}
@@ -24,19 +27,64 @@
     \subsubsection{RAM-Speicher-/Lese-Speicher}
     \includegraphics[width=8cm]{images/RAM}
 \end{multicols}
-    
-\vspace{-1cm} 
+
 \subsection{Speicherorganisation}
-    
-\begin{multicols}{2}
-    \subsubsection{Little/Big Endian}
+\begin{minipage}{9cm}
+	\subsubsection{Little/Big Endian}
     \includegraphics[width=8cm]{images/LittleBigEndian}
     
-    \subsubsection{I/O - Schnittstelle}
+    Der ARM Cortex verwendet standardm"assig \textbf{Little Endian} f"ur die Speicherorganisation. 
+\end{minipage}
+%
+\begin{minipage}{0.5cm}
+	\-\
+\end{minipage}
+%
+\begin{minipage}{9cm}
+	 \subsubsection{I/O - Schnittstelle}
     \includegraphics[width=8cm]{images/IOSchnittstelle}
-\end{multicols}
+    
+    \textbf{Datenregister}
+    \begin{itemize}
+    	\item enthalten die zu verarbeitenden Daten
+    \end{itemize}
+    \textbf{Steuerregister}
+    \begin{itemize}
+    	\item dienen zur Konfiguration der Ein-/Ausgabe Schnittstelle
+    \end{itemize}
+    \textbf{Statusregister}
+    \begin{itemize}
+    	\item signalisieren den Zustand der Ein-/Ausgabe Schnittstelle
+    \end{itemize}
+\end{minipage}
+ 
+\subsubsection{Speicherraumadressierung}
+\begin{minipage}{11cm}
+	\includegraphics[width=11cm]{images/Speicherraumadressierung}
+\end{minipage}
+%
+\begin{minipage}{0.5cm}
+	\-\
+\end{minipage}
+%
+\begin{minipage}{7cm}
+	\textbf{Isolierte Adressierung}
+	\begin{itemize}
+		\item Gesamter Adressraum steht verschiedener Bl"ocken zur Verf"ugung
+		\item Bl"ocke werden mit einem Steuersignal ausgew"ahlt
+	\end{itemize}
+	\textbf{Memory-Mapped I/O (Cortex M3)}
+	\begin{itemize}
+		\item Verschiedene Bl"ocke werden in einen Adressraum eingebettet
+		\item Ben"otigt eine Adresskodierung
+	\end{itemize}
+\end{minipage}
 
-\includegraphics[width=12cm]{images/Speicherraumadressierung}
+\newpage
+\subsection{Busanschluss und Adressverwaltung}
+
+\includegraphics[width=14cm]{images/Adressverwaltung}
+
 \clearpage
 %============================================
 
