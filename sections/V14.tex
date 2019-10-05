@@ -7,5 +7,5 @@ Wenn eine Exception auftritt während bereits eine ander Exception-Behandlunf mi
 Wenn der Prozessor einen auftretenden Exceptionrequest akzeptiert, dann startet er die Stacking-Sequenz. Kommt während dem stacking eine weitere Exception mit höherer Priorität hinzu, so kann diese Late-Arrival-Exception noch bevorzugt behandelt werden.
 
 \subsubsection{POP Preemption}
-Diese Funktion stellt gewissermassen eine Umkehrung des Late-Arribals dar. Wenn eine Exception Request während dem Unstacking auftritt, so wird das Unstacking abgebrochen, und sofort VectorFetch und Instruction Fetch für den neuen Request durchgeführt. \rightarrow Geschwindigkeitsoptimierung\\
+Diese Funktion stellt gewissermassen eine Umkehrung des Late-Arribals dar. Wenn eine Exception Request während dem Unstacking auftritt, so wird das Unstacking abgebrochen, und sofort VectorFetch und Instruction Fetch für den neuen Request durchgeführt. $\rightarrow$ Geschwindigkeitsoptimierung\\
 

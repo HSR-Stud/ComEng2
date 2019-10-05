@@ -4,8 +4,8 @@
         \subsection{Exceptions and Interrupts}\label{Exceptions}
         Der NVIC verarbeitet bis 240 IRQ und einen NMI\\
         \begin{tabular}{ll}
-            normaler Programmablauf& \rightarrow Background  \\ 
-            Exception-Handler& \rightarrow Foreground  \\ 
+            normaler Programmablauf& $\rightarrow$ Background  \\ 
+            Exception-Handler& $\rightarrow$ Foreground  \\ 
         \end{tabular} 
     \end{minipage}
     
@@ -17,7 +17,7 @@ Exception-Handler für Interrupts werden als Interrupt Service Routine (ISR) bez
 \subsubsection{Reset}
 Es gibt 3 Arten von Reset:\\
 \begin{tabular}{ll}
-    \textbf{Power-on Reset}  & Resettet den gesammten \mu C, auch alle Peripherien und Debug-Komponenten \\ 
+    \textbf{Power-on Reset}  & Resettet den gesammten $\mu$ C, auch alle Peripherien und Debug-Komponenten \\ 
     \textbf{System Reset}    & Resettet nur den Prozessor und die Peripherien, aber nicht die Debug-Komponenten \\ 
     \textbf{Processer Reset} & Resettet nur den Prozessor\\
 \end{tabular}
@@ -26,14 +26,14 @@ Es gibt 3 Arten von Reset:\\
      \includegraphics{images/resetsequenz}
 \subsection{Spezial-Register}     
 Register um Exceptions ein oder auszuschalten:\\
-\textbf{\rightarrow PRIMASK,FAULTMASK,BASEPRI}
+\textbf{$\rightarrow$ PRIMASK,FAULTMASK,BASEPRI}
 \begin{multicols}{2}
     \subsubsection{PRIMASK}
     \begin{itemize}
         \item 1-bit Register
         \item Wenn das aktiv ist, werden NMI-Interrupts erlaubt
-        \subitem \rightarrow alle anderen Interrupts werden überdeckt
-        \subitem \rightarrow Default-Wert= 0, also deaktiviert
+        \subitem $\rightarrow$ alle anderen Interrupts werden überdeckt
+        \subitem $\rightarrow$ Default-Wert= 0, also deaktiviert
     \end{itemize}
     
     \subsubsection{FAULTMASK}
@@ -41,7 +41,7 @@ Register um Exceptions ein oder auszuschalten:\\
         \item 1-bit Register
         \item Wenn das aktiv ist, werden nur noch NMI-Interrups akzeptiert.\newline
         Alle anderen Interrupts und Exceptioln-Handlings werden deaktiviert
-        \subitem \rightarrow Default-Wert = 0
+        \subitem $\rightarrow$ Default-Wert = 0
     \end{itemize}
 \end{multicols}
 

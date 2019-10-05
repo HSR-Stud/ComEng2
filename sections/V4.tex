@@ -54,7 +54,7 @@
     
     \textbf{Cortex-M}
     \begin{itemize}
-        \item Speziell für \mu C-Markt
+        \item Speziell für $\mu$ C-Markt
         \item Low Cost, Low Energy
         \item System on Chip (SOC) 
     \end{itemize}             
@@ -64,7 +64,7 @@
 \begin{multicols}{2}
     \begin{itemize}
         \item Low Power
-        \subitem < 200\mu A / MHz
+        \subitem < 200$\mu$ A / MHz
         \item Performance
         \subitem >1.25 DMIPS / MHz
         \item Energy Efficiency
@@ -87,10 +87,10 @@
 \begin{multicols}{2}
     \begin{itemize}
         \item Harvard Architecture
-            \subitem \rightarrow  Zugriffe auf Instruktionen und Daten
+            \subitem $\rightarrow$  Zugriffe auf Instruktionen und Daten
             \subitem \qquad können gleichzeitig stattfinden
         \item Internal Bus Interconnect
-            \subitem \rightarrow mehrere Bus-Interface 
+            \subitem $\rightarrow$ mehrere Bus-Interface 
         \item Nested Interrupt Controller \textbf{(NVIC)}
         \item Standart Timer \textbf{(SYSTICK)}\\
         \textbf{Optional:}
@@ -108,7 +108,7 @@
             \item Bis zu 240 externe Interrupts
             \item 8 bis 256 Prioritätslevel
         \end{itemize}
-        \rightarrow ISR benötigt 12 Taktzyklen\newline
+        $\rightarrow$ ISR benötigt 12 Taktzyklen\newline
         Siehe auch:\nameref{NVIC} S\pageref{NVIC}\\
     \end{minipage}
 
@@ -130,8 +130,8 @@
         \subsubsection{MPU}
         \begin{itemize}
             \item ermöglicht Zugriffsregel für den Privilieged Access und User Programm Access zu definieren
-            \item \rightarrow Wird eine Zugriffsrege verletzt erfolgt eine Exception-Regelung wodurch der Exceptrion Handler das Problem analysiert und ggf. beheben kann
-            \item \rightarrow Ausserdem ist es möglich gewisse Bereiche als read-only zu deklarieren
+            \item $\rightarrow$ Wird eine Zugriffsrege verletzt erfolgt eine Exception-Regelung wodurch der Exceptrion Handler das Problem analysiert und ggf. beheben kann
+            \item $\rightarrow$ Ausserdem ist es möglich gewisse Bereiche als read-only zu deklarieren
         \end{itemize}
     \end{minipage}
 \end{multicols}
@@ -235,7 +235,7 @@ The Q flag is sticky in that once it has been set to 1, it is not affected by wh
         \begin{itemize}
             \item Alternativer Stackpointer
             \item Wird nur im Thread-Mode verwendet
-            \subitem \rightarrow bei embedded OS-System
+            \subitem $\rightarrow$ bei embedded OS-System
         \end{itemize}   
     \end{minipage}
 \end{multicols}
