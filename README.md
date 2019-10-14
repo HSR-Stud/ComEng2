@@ -1,3 +1,5 @@
+# Damit das File ohne Fehler compiliert, muss der Standardcompiler auf LuaLatex gesetzt werden.
+
 # ComEng2
 Zusammenfasssung der Vorlesung ComEng2 FS16
 
