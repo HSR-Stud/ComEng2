@@ -82,9 +82,17 @@
 
 \newpage
 \subsection{Busanschluss und Adressverwaltung}
+Eine Adressverwaltung hat verschiedene Aufgaben zu erf"ullen:
+\begin{itemize}
+	\item Jede Adresse spricht nur einen einzigen Speicher- oder I/O-Baustein an.
+	\item Adressraum m"oglichst gut ausn"utzen
+	\item Adressr"aume von Speicherbausteinen m"ussen l"uckenlos aufeinander folgen.
+	\item Jeder interne Speicherplatz bzw. jedes Register erscheint unter einer eigenen Adresse im Systemadressraum.
+\end{itemize}
 
-\includegraphics[width=14cm]{images/Adressverwaltung}
-
+\subsubsection{Adresskodierung}
+\includegraphics[width=14cm]{images/Adressverwaltung}\\
+Der Kernpunkt der Adresskodierung ist die Teilung des Adressbuses. Dabei werden die \textit{k} niedrigsten Adressleitungen direkt an die Adresseing"ange des Bausteines gef"uhrt und dienen zur Auswahl des gew"unschten internen Speicherplatzes oder Registers. Die n"achstfolgenden \textit{l} Adressleitungen werden zur Adresskodierung auf einen Adressdekoder gef"uhrt.
 \clearpage
 %============================================
 

@@ -100,6 +100,7 @@
 \end{multicols}
 
 \subsection{System-Komponenten}
+\includegraphics[width=13.5cm]{images/Blockdiagramm}
 \begin{multicols}{2}
     \begin{minipage}{\linewidth}
         \subsubsection{NVIC}
@@ -173,9 +174,8 @@
 \end{multicols}
 
 \subsection{Programm Status Register}
-\renewcommand{\arraystretch}{1.2}
-\begin{minipage}{\linewidth}
-    \begin{tabular}{|l|l|}
+\begin{minipage}{9cm}
+	\begin{tabular}{|m{2cm}|m{6cm}|}
         \hline 
         \textbf{N}& Negativ \\ 
         \hline 
@@ -196,8 +196,13 @@
         \hline 
     \end{tabular} 
 \end{minipage}
-
-\subsubsection{Q-Flag}
+%
+\begin{minipage}{0.5cm}
+	\-\
+\end{minipage}
+%
+\begin{minipage}{9cm}
+	\subsubsection{Q-Flag}
 This flag is set to 1 if any of the following occurs:
 \begin{itemize}
     \item Saturation of the addition result in a \textit{QADD or QDADD} instruction
@@ -208,14 +213,15 @@ This flag is set to 1 if any of the following occurs:
 The Q flag is sticky in that once it has been set to 1, it is not affected by whether subsequent calculations saturate and/or overflow.\newline
 \textbf{An example:}\newline
 \textit{0x70000000 + 0x70000000} would become \textit{0xE0000000}, but since qadd is saturating, the result is saturated to \textit{0x7FFFFFFF} (the largest positive 32-bit integer) and the Q flag is set.
-\clearpage
-%===================================
-\includegraphics[width=19cm]{images/programstatusregister}
+\end{minipage}
 
+\includegraphics[width=14.5cm]{images/programstatusregister}
+
+\clearpage
 \subsection{Stack}
-\begin{multicols}{2}
-    \begin{minipage}{0.5\textwidth}
-        \begin{itemize}
+\begin{minipage}{9cm}
+	\subsubsection{Eigenschaften}
+	\begin{itemize}
             \item Temporäre Zwischenspeicherung von Daten während der ausführung einer Funktion
             \item Übergabe von Informationen an Funktionen oder Subroutinen
             \item Speichern von lokalen Variabeln
@@ -223,10 +229,14 @@ The Q flag is sticky in that once it has been set to 1, it is not affected by wh
             \item PUSH-POP-Instruktionen werden ausgeführt
             \item LIFO-Prinzip(Last In, First Out)
         \end{itemize}
-    \end{minipage}
-    
-    \begin{minipage}{0.5\textwidth}
-        \subsubsection{Main-Stack-Pointer (MSP)}
+\end{minipage}
+%
+\begin{minipage}{0.5cm}
+	\-\
+\end{minipage}
+%
+\begin{minipage}{9cm}
+	 \subsubsection{Main-Stack-Pointer (MSP)}
         \begin{itemize}
             \item Standard Stack Pointer nach einem Reset
             \item Innerhalb von Exception-Interrupt-Handler wird immer der MSP benutzt!
@@ -237,15 +247,13 @@ The Q flag is sticky in that once it has been set to 1, it is not affected by wh
             \item Wird nur im Thread-Mode verwendet
             \subitem $\rightarrow$ bei embedded OS-System
         \end{itemize}   
-    \end{minipage}
-\end{multicols}
 
+\end{minipage}
 
+\subsubsection{PUSH-POP Operationen}
+\includegraphics[width=16cm]{images/Stack}
 
-
-
-
-
+Der Stack wird von der h"ochsten Adresse aus gef"ullt, das heisst das bei einer PUSH-Operation der Stack-Pointer dekrementiert wird. Es gibt auch kombinierte PUSH/POP Operationen. Die wohl wichtigste ist die POP/Return Operation, bei welcher das Link-Register (LR) beim PUSH auf den Stack gelegt wird und bei der POP-Operation direkt in den Programm-Counter (PC) geschrieben wird. Da alle Register in der Registerbank 32-Bit breit sind, wird der Stack-Pointer immer eine \textit{4-Byte aligned Adresse} enthalten.
 
 
 

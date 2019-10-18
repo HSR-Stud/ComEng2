@@ -109,15 +109,16 @@ Dies umfasst die Beschreibung der Zentraleinheit (CPU), des Rechenwerks (ALU) un
 
 
 \clearpage
-\begin{minipage}{10cm}
+
 \subsection{Hardware}
-\subsubsection{Registersatz}
-Register sind schnelle Zwischenspeicher für \newline
-temporäre Daten im $\mu$ P.
+\begin{minipage}[t]{10cm}
+	\subsubsection{Registersatz}
+	Register sind schnelle Zwischenspeicher für \newline
+	temporäre Daten im $\mu$ P.
 \end{minipage}
-\begin{minipage}{0.5\linewidth}
-\subsubsection{Hardware- /Software-Schnitsttelle}
-\includegraphics{images/HardwareSoftware}
+\begin{minipage}[t]{0.5\linewidth}
+	\subsubsection{Hardware- /Software-Schnitsttelle}
+	\includegraphics{images/HardwareSoftware}
 \end{minipage}
 
 \subsubsection{Taktfrequenz}
@@ -128,7 +129,7 @@ Das Taktsignal steuert die zeitliche Abfolge im $\mu$ P \newline
         \end{minipage}
     
     \begin{minipage}{\linewidth}
-        $ \Uparrow $ Taktrate $ \Leftrightarrow $$  \Uparrow  $Leistungsaufnahme \\
+        $ \Uparrow $ Taktrate \-\ $ \Leftrightarrow $ \-\ $  \Uparrow  $Leistungsaufnahme \\
         Um Energie zu sparen ist es sinnvoll die Taktrate laufend anzupassen.\\
     \end{minipage}
 \end{multicols}
@@ -147,18 +148,24 @@ Das Taktsignal steuert die zeitliche Abfolge im $\mu$ P \newline
 \end{multicols}
 
 \subsection{Software}
-\begin{multicols}{2}
-\subsubsection{Ablauf}
-\begin{itemize}
-    \item Der \textbf{Präprozessor} bereitet das Quellprogramm für den Compiler vor
-    \item Der \textbf{Compiler} übersetzt das Programm von einer Hochsprache in ein Assembly-Programm
-    \item Der \textbf{Binder} fasst verschiedene Dateien, die verschiebbaren Maschinencode enthalten, zu einem Programm zusammen.
-    \item Der \textbf{Loader} wandelt die verschiebbaren Adressen in absolute Adressen um und lädt sie in den Speicher des Systems.
-\end{itemize}
+\begin{minipage}[b]{11cm}
+	\subsubsection{Ablauf}
+	\begin{itemize}
+    	\item Der \textbf{Präprozessor} bereitet das Quellprogramm für den Compiler vor
+    	\item Der \textbf{Compiler} übersetzt das Programm von einer Hochsprache in ein Assembly-Programm
+    	\item Der \textbf{Binder} fasst verschiedene Dateien, die verschiebbaren Maschinencode enthalten, zu einem Programm zusammen.
+    	\item Der \textbf{Loader} wandelt die verschiebbaren Adressen in absolute Adressen um und lädt sie in den Speicher des Systems.
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.5cm}
+	\-\
+\end{minipage}
+%
+\begin{minipage}{7cm}
+	\includegraphics[width=\linewidth]{images/CompilerWorkflow}
+\end{minipage}
 
-\includegraphics[width=\linewidth]{images/CompilerWorkflow}
-\end{multicols}
-\clearpage
 
 
 
