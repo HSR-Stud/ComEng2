@@ -1,56 +1,83 @@
 \section{V7}
-\subsection{Cortex M3 Instruction Set}
-\begin{multicols}{2}  
-    \subsubsection{Thumb-2 Instruction Set}
+\begin{minipage}[t]{9cm}
+	\subsection{Cortex M3 Instruction Set}
+	\subsubsection{Thumb-2 Instruction Set}
     \begin{tabular}{l l}
-        Ziel&-Erhöht die Code-Dichte\\
+        Ziel:&-Erhöht die Code-Dichte\\
             &  -Mehr Leistung\\ 
-        Cortex M3 Processor  & 1.25 DMIPS / MHz\\ 
+        Cortex M3 Processor:  & 1.25 DMIPS / MHz\\ 
     \end{tabular} 
     
-    \begin{minipage}{\textwidth}
-        \subsection{Logikstruktur des Cortex-M Prozessor}
+\subsection{Instruction Pipelining}
+                  Mit Pipelining bearbeitet der Cortex-M Prozessor zur gleichen Zeit drei Befehle - jeweils um einen Takt versetzt.\\
+     \includegraphics[width=9cm]{images/pipelining}\\
+     \begin{tabular}{m{1.5cm} m{6.5cm}}
+        Fetch:& 16-Bit Instruktion aus Programmspeicher laden\\
+        Decode:& Vorangehende Instruktion decodieren\\ 
+        Execute:& Nochmals vorangehende Instruktion ausf"uhren\\
+    \end{tabular} 
+    Bei einem Sprung im Programmcode muss eine Pipeline komplett geleert werden, da die sequentielle Reihenfolge je nach Konstellation nicht korrekt ist.
+\end{minipage}
+%
+\begin{minipage}[t]{0.5cm}
+	\-\
+\end{minipage}
+%
+\begin{minipage}[t]{9cm}
+	\subsection{Logikstruktur des Cortex-M Prozessor}
         \begin{tabular}{ll} 
             Sourceoperanden:& Rn, Rm \\ 
             Destinationsoperand:& Rd  \\ 
+            MAC:& Memory Access Calculator\\
+
         \end{tabular} \\
         Ein \textit{Barrel-Shifter} vereinfacht Berechnungen,\newline
-        da Multiplikationen einfacher realisiert werden können.
-    \end{minipage}
-\end{multicols}
-
-\begin{multicols}{2}
-     \begin{minipage}{\linewidth}
-        \subsection{Instruction Pipelining}
-         MAC = Memory Access Calculator\\
-         Load Store Architektur
-         \newline
-     \end{minipage}   
-     \includegraphics[width=\linewidth]{images/pipelining}
-     
-     \includegraphics[width=0.9\linewidth]{images/logikstrukturcortex}
-\end{multicols}
+        da Multiplikationen einfacher realisiert werden können.\\
+        \includegraphics[width=9cm]{images/logikstrukturcortex}
+        
+        Das 32-Bit breite Programm-Status-Register (xPSR) enth"alt die Flags. Das xPSR gliedert sich in drei verschiednen Darstellungen, je nach aktuellem Prozessorstatus als: \textit{Application-Program Register (APSR), Interrupt-Program Status Register (IPSR)} oder \textit{Execution-Program Status Regsiter (EPSR)}.\\
+        Die wichtigsten Flags (N, Z, C, V) sind die vier h"ochsten Bits des APSR, welche die Basis f"ur bedingte Verzweigungen darstellen.
+\end{minipage}
 
 \subsection{Anwendungen}
-\begin{multicols}{3}
-    \begin{minipage}{\linewidth}
+    \begin{minipage}{6cm}
        \subsubsection{Cortex-M0/M0+ / M1}  
         - einfaches I/O Handling 
     \end{minipage}
-    
-    \begin{minipage}{\linewidth}
+    %
+    \begin{minipage}{0.25cm}
+    	\-\
+    \end{minipage}
+    %
+    \begin{minipage}{6cm}
         \subsubsection{Cortex-M3}   
         - Komplexe Datenverarbeitung\newline
         - anspruchsvolle Applikationenen
     \end{minipage}
-
-    \begin{minipage}{\linewidth}
+    %
+    \begin{minipage}{0.25cm}
+    	\-\
+    \end{minipage}
+	%
+    \begin{minipage}{6cm}
         \subsubsection{Cortex-M4}   
        -  DSP-Funktionalität\newline
        -  Floating Point Support
     \end{minipage}
-\end{multicols}
-    
+
+\subsection{Software Development Prozess}
+\begin{minipage}{9.5cm}
+	Die Umsetzung von Hochsprachen Source-Code in Assembly-Language und weiter in den bin"aren OpCode des jeweiligen Prozessors ist ein komplexer, mehrstufiger Prozess. Im ersten Durchgang  baut der Assembler eine Symboltabelle auf, welche Informationen "uber sogenannte \textit{programmer-defined Identifiers} enth"alt (z.B. Adressen von Sprungmarken, Subroutinen, Variablen, I/O-Port Registern, usw.). W"ahrend des zweiten Durchgangs benutzt der Assembler diese Informationen, um die einzelnen Assembler-Instruktionen zu vervollst"andigen. Erst in einem weiteren Teilschritt der Assemblierung werden die bin"aren OpCode ermittelt.
+\end{minipage}
+%
+\begin{minipage}{0.5cm}
+	\-\
+\end{minipage}
+%
+\begin{minipage}{8.5cm}
+	\includegraphics[width=8.5cm]{images/SoftwareDevelopmentProzess}
+\end{minipage}
+
 \subsection{Assembly-Language Syntax}
 \begin{tabular}{llll}
     \textbf{Lable}  &\textbf{OpCode}  &\textbf{Operand}  & \textbf{Comment} \\ 
