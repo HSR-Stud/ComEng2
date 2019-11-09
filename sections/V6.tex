@@ -23,7 +23,20 @@ Jede Exception-Quelle hat eine zugeh"orige Exception-Number:
 Exception-Handler für Interrupts werden als Interrupt Service Routine (ISR) bezeichnet, wobei die Interrupt-Latenzzeit (\textit{Interrupt Latency}) gerade mal 12 Clockzyklen betr"agt.
 
 \subsubsection{NVIC}
-Jeder Interrupt kann individuell aktiviert/deaktiviert werden, ausserdem kann sein \textit{Pending State} durch die Software gesetzt/gel"oscht werden. Den Exceptions k"onnen \textit{Priority-Level} zugeordnet werden und somit ausgel"oste ISRs mit tieferer Priorit"at durch einen Interrupt h"oherer Priorit"at unterbrochen werden.
+Jeder Interrupt kann individuell aktiviert/deaktiviert werden, ausserdem kann sein \textit{Pending State} durch die Software gesetzt/gel"oscht werden. Den Exceptions k"onnen \textit{Priority-Level} zugeordnet werden und somit ausgel"oste ISRs mit tieferer Priorit"at durch einen Interrupt h"oherer Priorit"at unterbrochen werden. 
+
+\begin{minipage}{10cm}
+	Es gibt 8 verschiedene Priorit"atsstufen, wobei diese noch in Priorit"atsgruppen aufgeteilt werden k"onnen. Daraus entstehen dann \textit{Preemptive levels} und \textit{Subpriority levels}. Wenn nun zum Beispiel zwei Interrupts das gleiche \textit{Preemptive level} besitzen, kann mit dem \textit{Subpriority level} bestimmt werden, welcher Interrupt beim gleichzeitigen auftreten zuerst ausgef"uhrt wird. Ein Interrupt mit einer h"oheren \textit{Subpriority} kann jedoch keinen einer tiefen \textit{Subpriority} unterbrechen, wenn sie das gleiche \textit{Preemptive level} besitzen.
+\end{minipage}
+%
+\begin{minipage}{0.25cm}
+	\-\
+\end{minipage}
+%
+\begin{minipage}{8cm}
+	\includegraphics[width=8cm]{images/prioritaetsstufen}
+\end{minipage}
+
 \subsection{Reset und Reset-Sequenzen}
 \subsubsection{Reset}
 Es gibt 3 Arten von Reset:\\
@@ -89,9 +102,6 @@ Register um Exceptions ein oder auszuschalten:\\
 
 \subsubsection{BASEPRI}
 \begin{itemize}
-    \item Register das bis zu 8 Bits enthalten kann
-    \item definiert eine Prioritätsstufe
-    \item Hohe Stufe = Hohe Priorität
     \item Wenn das gesetzt wird, werden alle Interrupts mit gleicher oder tieferer Stufe deaktiviert
 \end{itemize}
 
