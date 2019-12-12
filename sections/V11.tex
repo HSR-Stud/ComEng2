@@ -1,6 +1,6 @@
 \section{V11}
 \subsection{Subroutinen}
-\includegraphics[11cm]{images/subroutinen} 
+\includegraphics[width=11cm]{images/subroutinen} 
 
 \subsection{Architecure Producer Call Standart (AAPCS)}
 \subsubsection{Regeln}
@@ -21,7 +21,8 @@
 		\item \textbf{Stackpointer SP (R13)} wird um 8 nach nach unten verschoben
 		\item  Variablen \textit{e} und \textit{f} werden vom Caller auf den Stack gelegt.
 		\item \textit{R0 - R3} werden Parameter zugewiesen
-		\item Sprung zum Label \textit{foo$\_$4}
+		\item Sprung zum Label \textit{foo$\_$4}\\
+				\textit{LR} $\Leftarrow$ \textit{retAdr}
 		\item \textit{R2, R3, R7, LR} werden auf den Stack gelegt (\textit{SP} wird um 16 nach unten verschoben)
 		\item \textit{R7} wird f"ur Zugriff auf \textit{e} und \textit{f} als Framepointer gesetzt.
 		\item \textit{R0 - R3} werden auf den Stack gelegt
