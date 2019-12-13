@@ -51,7 +51,7 @@ Pro Operation (read oder write) k"onnen auf dem internen 32-Bit breiten Datenbus
 \begin{minipage}{12cm}
 	\vspace{-2ex}
 	\textbf{BBAA} = \textbf{BBAB} + (\textbf{MA} - \textbf{BBRB}) $\cdot 2^5$ + 4 $\cdot$ \textbf{BNr}\\
-	\textbf{BNr} = [ 0x0000001F \& (\textbf{BBAA} - \textbf{BBAB}) ] $\cdot 2^{-2}$\\
+	\textbf{BNr} = [ 0x0000001F \& (\textbf{BBAA} - \textbf{BBAB}) ] $\cdot 2^{-2}$\\
 	\textbf{MA} = (\textbf{BBAA} $-$ \textbf{BBAB})$\cdot 2^{-5}$ + \textbf{BBRB}\\
 	
 	Bei der zur"uckrechnung ist \textbf{MA} die Byte-Adresse und \textbf{BNr} immer zwischen 0-7. Wenn nun die aligned Half-Word oder aligned Word Adresse gefragt ist muss die Adresse und die Bitnummer noch dementsprechend angepasst werden.
